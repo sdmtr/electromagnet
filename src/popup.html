@@ -1,0 +1,306 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Electromagnet</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        user-select: none;
+        cursor: default;
+      }
+
+      a {
+        cursor: pointer;
+        color: #5098e0;
+        transition: all 0.2s ease-in-out;
+      }
+
+      a:hover {
+        color: #79bcff;
+      }
+
+      html, body, ul, li {
+        margin: 0;
+        padding: 0;
+      }
+
+      h1, h2, h3, h4, h5, h6, p { margin-top: 0; }
+
+      img { border: 0; }
+
+      input, textarea, select {
+        font-size: 110%;
+        line-height: 1.1;
+      }
+
+      .clearfix:after {
+        visibility: hidden;
+        display: block;
+        font-size: 0;
+        content: " ";
+        clear: both;
+        height: 0;
+      }
+      .clearfix { display: inline-block; }
+      /* start commented backslash hack \*/
+      * html .clearfix { height: 1%; }
+      .clearfix { display: block; }
+      /* close commented backslash hack */
+
+      body {
+         font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+         font-size: small;
+         font-weight: normal;
+         color: #333;
+         background-color: #fff;
+      }
+
+      #container {
+        width: 15em;
+        margin: 0;
+      }
+
+      #container h1 {
+        font-size: 1.5em;
+        font-weight: bold;
+        padding: 1em 1em 0;
+        text-align: center;
+      }
+
+      #container ul li {
+        list-style: none;
+      }
+
+      #container ul li a.dnw-option {
+        padding: 0.7em;
+        background-color: #333;
+        color: #fff;
+        border-bottom: 1px solid #000;
+        display: block;
+        cursor: pointer;
+      }
+
+      #container ul li a.dnw-option:hover {
+        background-color: #222;
+      }
+
+      #container ul li a.dnw-option:before {
+        content: "";
+        display: inline-block;
+        border: 1px solid red;
+        background-color: red;
+        border-radius: 0.5em;
+        width: 0.5em;
+        height: 0.5em;
+        position: relative;
+        
+        margin-right: 0.5em;
+      }
+
+      #container ul li:last-of-type {
+        border-bottom: none;
+      }
+
+      div#sections {
+        width: 15em;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+
+      section {
+        width: 15em;
+        overflow: hidden;
+        display: inline-block;
+        white-space: normal;
+        box-sizing: border-box;
+      }
+
+      section p {
+        margin: 0;
+        padding: 0 1em 1em;
+      }
+
+      section#switch {
+        text-align: center;
+      }
+
+      section#switch img {
+        cursor: pointer;
+        cursor: hand;
+      }
+
+      section#switch .counter {
+        border: 0;
+        font-size: 32px;
+        color: #333;
+        text-align: center;
+        width: 144px;
+        height: auto;
+        margin: 0 auto;
+        border-radius: 4px;
+        background-color: #e5e5e5;
+        line-height: 1em;
+        padding: 5px;
+      }
+
+      section#switch .tooltip {
+        font-size: 12px;
+        padding-bottom: 1em;
+      }
+
+      section#switch #click-to-enable {
+        display: none;
+      }
+
+      section#scratch pre { 
+        text-align: center;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 0.5em;
+        padding: 0 1em;
+        margin: 0 0 10px;
+      }
+
+      span#reset-congrats {
+        display: none;
+        color: yellowgreen;
+      }
+
+      div#bar {
+        background-color: #eee;
+      }
+
+      div#bar ul {
+        float: right;
+        margin-right: 0.5em;
+      }
+
+      div#bar ul li {
+        display: inline-block;
+        float: left;
+      }
+
+      div#bar ul li a {
+        padding: 0.2em 0.15em 0;
+        display: inline-block;
+        cursor: pointer;
+      }
+
+      div#bar ul li a img {
+        height: 1.1em;
+        cursor: pointer;
+        opacity: 0.5;
+      }
+
+      div#bar ul li a:hover img {
+        opacity: 1;
+      }
+
+      div#bar ul li a.active img {
+        opacity: 1;
+      }
+
+      div#bar p {
+        padding: 1em 1em;
+        float: left;
+        margin: 0;
+        font-size: 0.5em;
+      }
+
+      div#header img {
+        padding: 0 10px;
+        max-width: 100%;
+        box-sizing: border-box;
+      }
+
+      a.btn {
+        margin: 0 auto;
+        padding: 0.5em 1em;
+        font-weight: bold;
+        font-size: x-small;
+        border-radius: 0.25em;
+        background-color: #5098e0;
+        color: #fff;
+        box-shadow: 0px 1px 3px rgba(0,0,0,0.1);
+        transition: all 0.2s ease-in-out;
+        margin-bottom: 5px;
+        display: block;
+        width: 88%;
+      }
+
+      a.btn:hover {
+        background-color: #79bcff;
+      }
+
+      a.btn:active {
+        position: relative;
+        top: 1px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="header">
+        <img src="img/header.png">
+      </div>
+
+      <div id="sections">
+        <section id="scratch">
+          <pre>
+
+
+
+
+          </pre>
+          <div>
+            <center>
+              <a class="btn center" id="force-update">Force update</a>
+              <a class="btn center" id="log-trackers">Log trackers</a>
+              <a class="btn center" id="log-blacklist">Log blacklist</a>
+              <a class="btn center" id="clear-storage">Clear local storage</a>
+              <a class="btn center" id="dump-storage">Dump local storage</a>
+              <a class="btn center" id="im-done-here" data-return="switch">I'm done here</a>
+            </center>
+          </div>
+        </section>
+
+        <section id="switch">
+          <img id="toggle" src="img/electromagnet-active.png">
+          <div class="counter">&middot;&middot;&middot;</div>
+          <div class="tooltip" id="click-to-disable">Click to disable on this site</div>
+          <div class="tooltip" id="click-to-enable">Click to enable on this site</div>
+        </section>
+
+        <section id="settings">
+          <p>
+            I'm afraid there aren't really any settings to speak of, but if you like you can <a id="reset">reset the link counters</a>. <span id="reset-congrats">Hooray, you did it!</span>
+          </p>
+          <center><a class="btn center" data-return="switch">Finished</a></center>
+        </section>
+
+        <section id="info">
+          <p>
+            Electromagnet electrifies your torrents by automatically adding lots of stable public trackers from <a href="https://newtrackon.com/" target="_blank">newTrackon</a> to magnet links, giving you access to way more seeders.
+          </p>
+
+          <center>
+            <p>
+              <a tabindex="-1" href="https://github.com/sdmtr/electromagnet" target="_blank">Want to know more?</a>
+            </p>
+            <a class="btn center" data-return="switch">Got it</a>
+          </center>
+        </section>
+      </div>
+
+      <div id="bar" class="clearfix">
+        <p><span id="electrified">0</span> electrified links, <span id="clicked">0</span> clicked</p>
+        <ul>
+          <li><a class="bar-option" data-option="settings"><img src="img/gear.png"></a></li>
+          <li><a class="bar-option" data-option="info"><img src="img/info.png"></a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <script src="jquery.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>

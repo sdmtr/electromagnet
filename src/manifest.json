@@ -1,0 +1,40 @@
+{
+  "manifest_version": 2,
+
+  "name": "Electromagnet",
+  "description": "Electrifies your torrents by automatically adding lots of stable trackers from newTrackon to all magnet links.",
+  "version": "0.1",
+
+  "icons": {
+    "16": "img/icons/icon-16.png",
+    "32": "img/icons/icon-32.png",
+    "48": "img/icons/icon-48.png",
+    "64": "img/icons/icon-64.png",
+    "128": "img/icons/icon-128.png",
+    "256": "img/icons/icon-256.png",
+    "512": "img/icons/icon-512.png"
+  },
+
+  "browser_action": {
+    "default_icon": "img/icons/icon-512.png",
+    "default_popup": "popup.html"
+  },
+
+  "background": {
+    "scripts": [
+      "electromagnet.js"
+    ],
+    "persistent": false
+  },
+
+  "permissions": [
+    "alarms",
+    "activeTab",
+    "storage"
+  ],
+
+  "content_scripts": [{
+    "matches": ["*://*/*"],
+    "js": ["jquery.js", "inject.js"]
+  }]
+}
