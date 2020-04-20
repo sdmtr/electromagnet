@@ -38,6 +38,7 @@ The only outbound connection Electromagnet makes is to the [newTrackon API](http
   2. Create a way for users to blacklist specific trackers.
   3. At the moment Electromagnet appends all of the trackers it knows about even if the magnet link already has one or more of those trackers associated with it. That doesn't cause any actual problems with torrent clients, but it's better to full-arse something than half-arse it.
   4. Some of the error handling needs to be improved to avoid littering the console with "unchecked runtime.lasterror" messages. I'm not entirely sure what I need to do to fix that though.
+  5. I'd really like to create a better logo and icon, but my graphic design skills aren't great. If you'd like to contribute some better images, please submit a pull request!
 
 ## Credits
 
