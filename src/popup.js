@@ -9,9 +9,7 @@
 
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
       chrome.tabs.sendMessage(tabs[0].id, { action: 'get_electrified' }, function(response) {
-        if (chrome.runtime.lastError) {
-          //console.warn("Electromagnet experienced an error: " + chrome.runtime.lastError.message);
-        }
+        if (chrome.runtime.lastError) {}
         electrified = (response) ? response.electrified || 0 : 0;
         $('#switch .counter').text(electrified);
       });
@@ -120,9 +118,7 @@
 
     $('#clear-storage').click(function() {
       chrome.storage.local.clear(function() {
-        if (chrome.runtime.lastError) {
-          //console.error(error);
-        }
+        if (chrome.runtime.lastError) {}
       });
     });
 

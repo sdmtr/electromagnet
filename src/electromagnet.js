@@ -39,7 +39,7 @@
         break;
     }
 
-    return true;
+    return Promise.resolve('doing okay here');
   });
 
   function update_trackers() {

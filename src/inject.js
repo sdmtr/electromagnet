@@ -38,6 +38,7 @@
     switch (msg.action) {
       case 'log_trackers':
         console.table(trackers.list);
+        sendResponse({message: 'done and dusted'});
         break;
 
       case 'log_blacklist':
@@ -45,16 +46,19 @@
           vars.blacklist = vars.blacklist || [];
           console.table(vars.blacklist);
         });
+        sendResponse({message: 'done and dusted'});
         break;
 
       case 'apply_trackers':
         blacklisted = false;
         apply_trackers();
+        sendResponse({message: 'done and dusted'});
         break;
 
       case 'remove_trackers':
         blacklisted = true;
         remove_trackers();
+        sendResponse({message: 'done and dusted'});
         break;
 
       case 'get_electrified':
@@ -65,6 +69,7 @@
         chrome.storage.local.get(null, function(items) {
           console.table(items);
         });
+        sendResponse({message: 'done and dusted'});
       }
 
       default:
@@ -72,7 +77,7 @@
         break;
     }
 
-    return true;
+    return Promise.resolve('doing okay here');
   });
 
   function apply_trackers() {

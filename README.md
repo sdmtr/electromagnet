@@ -32,6 +32,13 @@ Electromagnet contains no tracking or analytics code of any kind, and does not c
 
 The only outbound connection Electromagnet makes is to the [newTrackon API](https://newtrackon.com/api), which returns a list of stable public trackers. Due to the way browsers work newTrackon will receive your public IP address and [user agent](https://en.wikipedia.org/wiki/User_agent#Format_for_human-operated_web_browsers) (essentially just the name of the browser you use, it doesn't contain any personally identifiable information) whenever the API is accessed and they may or may not log connection attempts, but they do not receive any information about the sites you're browsing or the torrents you're downloading.
 
+## Todo
+
+  1. Get rid of the jQuery dependency.
+  2. Create a way for users to blacklist specific trackers.
+  3. At the moment Electromagnet appends all of the trackers it knows about even if the magnet link already has one or more of those trackers associated with it. That doesn't cause any actual problems with torrent clients, but it's better to full-arse something than half-arse it.
+  4. Some of the error handling needs to be improved to avoid littering the console with "unchecked runtime.lasterror" messages. I'm not entirely sure what I need to do to fix that though.
+
 ## Credits
 
 Much thanks to [@CorralPeltzer](https://twitter.com/CorralPeltzer) for creating [newTrackon](https://newtrackon.com/), and for providing a public API to their astoundingly useful service. A note of thanks should also go to [Uriel](http://uriel.cat-v.org/) for creating the original Trackon project.
