@@ -4,7 +4,7 @@
 
 ## How it works
 
-Electromagnet downloads the latest list of stable public trackers from [newTrackon](https://newtrackon.com/) every hour or so, and automatically adds those trackers to any magnet links it sees on every site you visit. For most public torrents the more trackers you're connected to, the more seeders you can access.
+Electromagnet downloads the latest list of stable public trackers from [newTrackon](https://newtrackon.com/) every hour or so and automatically adds those trackers to any magnet links it sees as you're browsing the web. For most public torrents, the more trackers you're connected to the more seeders you can access.
 
 You can also tell Electromagnet not to electrify magnet links on a particular site, for example if you're a member of a private Linux ISO torrent community.
 
