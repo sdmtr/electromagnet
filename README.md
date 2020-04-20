@@ -28,12 +28,12 @@ If you're a technical kind of person, you can shift+click the magnet graphic to 
 
 ## Privacy
 
-Electromagnet contains no tracking or analytics code of any kind, and does not send any information about the websites you visit or torrents you download to anybody for any reason. It does not store a specific list of which magnet links it has modified or which you have clicked, it just stores a numeric counter for those links. It does store a list of the most recent stable trackers from newTrackon, but only in localStorage. No data ever leaves your machine.
+Electromagnet contains no tracking or analytics code of any kind, and does not collect any information about the websites you visit or torrents you download. It does not store a specific list of which magnet links it has modified or which you have clicked. It does store a list of the most recent stable public trackers from newTrackon, but only locally.
 
-The only outbound connection Electromagnet makes is to the [newTrackon API](https://newtrackon.com/api), which just returns a list of stable public trackers. newTrackon will receive your public IP address whenever the API is accessed and they may or may not log all connection attempts, but they do not receive any information about the sites you're browsing or the torrents you're downloading.
+The only outbound connection Electromagnet makes is to the [newTrackon API](https://newtrackon.com/api), which returns a list of stable public trackers. Due to the way browsers work newTrackon will receive your public IP address and [user agent](https://en.wikipedia.org/wiki/User_agent#Format_for_human-operated_web_browsers) (essentially just the name of the browser you use, it doesn't contain any personally identifiable information) whenever the API is accessed and they may or may not log connection attempts, but they do not receive any information about the sites you're browsing or the torrents you're downloading.
 
 ## Credits
 
 Much thanks to [@CorralPeltzer](https://twitter.com/CorralPeltzer) for creating [newTrackon](https://newtrackon.com/), and for providing a public API to their astoundingly useful service. A note of thanks should also go to [Uriel](http://uriel.cat-v.org/) for creating the original Trackon project.
 
-Thumbs Up icon, Gear icon, and Info icon made by [Freepik](http://www.freepik.com) from [www.flaticon.com](http://www.flaticon.com), licensed under [CC 3.0 BY](http://creativecommons.org/licenses/by/3.0/)
+Gear icon and Info icon made by [Freepik](http://www.freepik.com) from [www.flaticon.com](http://www.flaticon.com), licensed under [CC 3.0 BY](http://creativecommons.org/licenses/by/3.0/)
