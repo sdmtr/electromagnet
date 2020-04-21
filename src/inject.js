@@ -85,7 +85,13 @@
       electrified = 0;
       $('a').each(function(i, e) {
         if (this.protocol == "magnet:") {
-          this.href += trackers_uri;
+          this.setAttribute('original-href', this.href);
+          var max = 2000 - this.href.length;
+          var new_uri = trackers_uri;
+          while (new_uri.length > max) {
+            new_uri = new_uri.substring(0, new_uri.lastIndexOf('&'));
+          }
+          this.href += new_uri;
           electrified++;
         }
       });
@@ -99,7 +105,9 @@
 
   function remove_trackers() {
     $('a').each(function(i, e) {
-      if (this.protocol == "magnet:") this.href = this.href.replace(trackers_uri, '');
+      if (this.protocol == "magnet:" && this.getAttribute('original-href')) {
+        this.href = this.getAttribute('original-href');
+      }
     });
   }
 
