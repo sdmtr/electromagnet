@@ -12,7 +12,7 @@
     blacklisted = blacklist.includes(hostname);
 
     trackers = vars.trackers || [];
-    if (trackers.length) { 
+    if (typeof trackers.list !== 'undefined') { 
       trackers.list.forEach(function(tracker) {
         trackers_uri += '&tr=' + encodeURIComponent(tracker);
       });
