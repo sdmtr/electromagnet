@@ -2,7 +2,7 @@
   "manifest_version": 2,
 
   "name": "Electromagnet",
-  "description": "Electrifies your torrents by automatically adding lots of stable trackers from newTrackon to all magnet links as you browse the web.",
+  "description": "Electrifies your torrents by automatically adding lots of stable trackers from newTrackon to all magnet links as you browse the web, giving you access to way more seeders.",
   "version": "0.1",
 
   "icons": {
