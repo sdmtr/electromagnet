@@ -18,7 +18,7 @@ Because Electromagnet hasn't been submitted to the Chrome Extension store yet (a
 
   1. Either clone this repo to your machine or download a ZIP copy (click the green "Clone or download" button on this page and choose "Download ZIP", but make sure you remember to actually unpack the ZIP file once you've downloaded it)
   2. Open Chrome and navigate to the Extensions page (chrome://extensions/)
-  3. If it isn't already active, activate the "Developer mode" switch near the top right of the page
+  3. If it isn't already turned on, activate the "Developer mode" switch near the top right of the page
   4. Click the "Load unpacked" button near the top left of the page
   5. Navigate to wherever you saved the repo or unpacked the ZIP archive, and select the "src" directory 
 
