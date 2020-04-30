@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/sdmtr/electromagnet/blob/master/src/img/bypass.png">
+  <img src="https://github.com/sdmtr/electromagnet/blob/master/src/img/electromagnet-active.png">
 </p>
 
 <h1 align="center">Electromagnet</h1>
