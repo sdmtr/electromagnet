@@ -1,6 +1,10 @@
-# Electromagnet
+<p align="center">
+  <img src="https://github.com/sdmtr/electromagnet/blob/master/src/img/bypass.png">
+</p>
 
-***A Chrome extension that electrifies your torrents by automatically adding lots of stable trackers from [newTrackon](https://newtrackon.com/) to all magnet links as you browse the web, giving you access to way more seeders.***
+<h1 align="center">Electromagnet</h1>
+
+***Electromagnet is a Chrome extension that electrifies your torrents by automatically adding lots of stable trackers from [newTrackon](https://newtrackon.com/) to all magnet links as you browse the web, giving you access to way more seeders.***
 
 ## How it works
 
